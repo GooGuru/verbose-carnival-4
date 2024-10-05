@@ -17,5 +17,16 @@ formEl.addEventListener('submit', (event) => {
       content: contentElValue
   }
 
+  if (userNameValue === '') {
+    alert('Username cannot be blank')
+  } else if (titleElValue === ''){
+    alert('Title cannot be blank')
+  } else if (contentElValue === '') {
+    alert('Conctent cannot be blank')
+  } else {
+    location.href = "./blog.html";
+  }
+  
+
   localStorage.setItem('blog', JSON.stringify(blogData));
 });
